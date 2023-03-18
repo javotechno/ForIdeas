@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Disfruta de las pizzas más deliciosas y sabrosas en nuestra tienda en línea. Tenemos una gran variedad de ingredientes frescos y una masa crujiente que te harán agua la boca. ¡Haz tu pedido ahora y saborea la perfección en cada bocado!"
+    />
+    <meta
+      name="keywords"
+      content="pizza, comida rápida, entrega a domicilio, ingredientes frescos, masa crujiente, queso derretido, sabores italianos, menú variado, promociones, descuentos"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <title>Don Remolo</title>
+  </head>
+
+  <body>
+    <header id="header" class="sticky-top">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <!-- Logo -->
+          <a
+            class="text-reset"
+            href="./"
+            class="navbar-brand"
+            title="Logo Don Remolo"
+          >
+            <img
+              src="https://res.cloudinary.com/dmatgvjjy/image/upload/v1677686496/don%20remolo/logo_mdhwso.jpg"
+              alt="Logo Don Remolo"
+              class="img-fluid logo"
+              loading="lazy"
+              height="80"
+              width="100"
+          /></a>
+
+          <!-- Menú -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarToggler"
+            aria-controls="navbarToggler"
+            aria-expanded="false"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Links menú principal -->
+          <div
+            class="navbar-collapse justify-content-md-end collapse"
+            id="navbarToggler"
+          >
+            <ul class="navbar-nav d-sm-flex">
+              <li class="nav-item">
+                <a class="text-reset nav-link" href="./">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="text-reset nav-link" href="./#products">Menú</a>
+              </li>
+              <li class="nav-item">
+                <a class="text-reset nav-link" href="./#our">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="text-reset nav-link" href="./#contact">Contacto</a>
+              </li>
+
+              <li class="nav-item">
+                <button
+                  type="button"
+                  class="btn btn-cart px-0 ps-lg-2"
+                  data-bs-toggle="modal"
+                  data-bs-target="#carrito"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="35"
+                    height="35"
+                    fill="currentColor"
+                    class="bi bi-cart cart-icon carrito-decompras"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                    />
+                  </svg>
+                  <span id="contadorCarrito"></span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Modal del carrito -->
+    <div
+      class="modal right fade"
+      id="carrito"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="carrito"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="carrito2">Don Remolo - Pizería</h4>
+            <img
+              src="/DonRemolo/images/contenedor-de-basura.png"
+              class="ms-4"
+              width="30px"
+              alt="empty bin"
+              onclick="vaciarCarrito()"
+            />
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div id="pedido">
+              <!-- El Contenido del carrito se carga por JS -->
+            </div>
+          </div>
+          <div
+            class="modal-footer d-flex flex-row justify-content-around p-modal m-4"
+          >
+            <p id="comprar">
+              <!-- el total se caragra dinamicamente -->
+            </p>
+            <button
+              type="button"
+              id="btn-finalizar"
+              class="closed btn btn-danger"
+            >
+              FINALIZAR COMPRA
+            </button>
+          </div>
+        </div>
+        <!-- modal-content -->
+      </div>
+      <!-- modal-dialog -->
+    </div>
+    <!-- modal -->
+
+    <main>
+      <!-- seccion inicio -->
+      <section class="inicio d-flex justify-content-end" id="inicio">
+        <img
+          src="./images/PizzaGiratoria.png"
+          alt="Don Remolo"
+          class="img-fluid gif-banner d-sm-none d-md-block"
+        />
+        <div class="conteiner-black d-flex flex-column align-items-center">
+          <div class="text-light align-self-center main-titles">
+            <h1 class="mt-4 title-main1">Pizzería</h1>
+            <h2 class="me-5 title-main">Don Remolo</h2>
+          </div>
+          <div class="d-flex flex-column align-items-center arrow-main">
+            <p class="fs-4">Ver menú</p>
+            <div class="icon-menu">
+              <a href="#products"
+                ><img
+                  class="flecha"
+                  src="./images/flecha-hacia-abajo-para-navegar.png"
+                  alt="Don Remolo"
+                  loading="lazy"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- seccion productos -->
+      <section class="products" id="products">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-center menu-main">
+              <p class="title-products">Menú</p>
+            </div>
+
+            <div class="col-12 col-md-12">
+              <div class="container square-prods">
+                <!-- iconos -->
+                <div class="row icon-div">
+                  <div class="col-3">
+                    <img
+                      id="pizzas"
+                      src="https://res.cloudinary.com/dmatgvjjy/image/upload/v1677683944/don%20remolo/porcion-de-pizza_vhah2n.png"
+                      alt="Don Remolo"
+                      loading="lazy"
+                      class="img-fluid menu-icons"
+                    />
+                  </div>
+                  <div class="col-3">
+                    <img
+                      id="empanadas"
+                      src="https://res.cloudinary.com/dmatgvjjy/image/upload/v1677683948/don%20remolo/empanada_saanmb.png"
+                      loading="lazy"
+                      alt="Don Remolo"
+                      class="img-fluid menu-icons"
+                    />
+                  </div>
+                  <div class="col-3">
+                    <img
+                      id="beverages"
+                      src="https://res.cloudinary.com/dmatgvjjy/image/upload/v1677683977/don%20remolo/bebidas_kh7zkz.png"
+                      loading="lazy"
+                      alt="Don Remolo"
+                      class="img-fluid menu-icons"
+                    />
+                  </div>
+                  <div class="col-3">
+                    <img
+                      id="iceCreams"
+                      src="https://res.cloudinary.com/dmatgvjjy/image/upload/v1677683938/don%20remolo/helado1_fj6upb.png"
+                      alt="icon-ice-cream"
+                      class="img-fluid menu-icons"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+
+                <div class="row d-flex pt-5">
+                  <div class="col-12">
+                    <div class="card-group gap-4" id="menu-products">
+                      <!-- Se crean las cards dinamicamente -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- seccion nosotros -->
+      <section
+        id="our"
+        class="our d-flex py-5 flex-row align-items-center justify-content-center"
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <h3>Don Remolo - Pizzería Argentina</h3>
+              <p>
+                Bienvenidos a Don Remolo, la pizzería más auténtica y sabrosa de
+                Argentina. Nuestro local se encuentra en el corazón de la
+                ciudad, rodeado de la energía y el sabor que caracterizan a
+                Buenos Aires. Desde hace más de 30 años, hemos sido el destino
+                preferido de los amantes de la pizza en busca de una experiencia
+                única e inolvidable.
+              </p>
+
+              <p>
+                Nuestras pizzas son hechas con los ingredientes más frescos y
+                seleccionados cuidadosamente por nuestro equipo de expertos en
+                cocina. La masa es amasada a mano y horneada a la perfección,
+                logrando una textura crujiente y una base suave que se deshace
+                en la boca.
+              </p>
+
+              <p>
+                Pero en Don Remolo no solo nos enorgullece nuestra pizza, sino
+                también el ambiente acogedor y familiar que ofrecemos a nuestros
+                clientes. Nuestro personal es amable y siempre está dispuesto a
+                atender cualquier necesidad que tengas, desde recomendarte una
+                bebida refrescante hasta ajustar la intensidad de los
+                condimentos a tu gusto.
+              </p>
+
+              <p>
+                Si estás buscando una pizzería auténtica en Argentina, no dudes
+                en visitarnos en Don Remolo. Estamos abiertos todos los días
+                para que puedas disfrutar de una experiencia única de sabor y
+                tradición en cada bocado.
+              </p>
+            </div>
+            <div class="col-12 col-md-6">
+              <img
+                src="https://res.cloudinary.com/dmatgvjjy/image/upload/v1677710325/don%20remolo/jonas-jacobsson-1iTKoFJvJ6E-unsplash_newn6c.jpg"
+                alt="Local de don remolo"
+                loading="lazy"
+                class="img-local img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- wp -->
+    <a
+      class="text-reset fixed-btn"
+      target="_blank"
+      href="https://wa.me/5492494544221"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="25"
+        height="30"
+        fill="currentColor"
+        class="bi bi-whatsapp logo-whatssap"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"
+        />
+      </svg>
+    </a>
+
+    <footer class="pt-4 px-20 py-4">
+      <div class="container">
+        <div class="row">
+          <div class="d-none d-sm-block col-12 col-md-2 col-1">
+            <a
+              class="text-decoration-none"
+              href="./index.html"
+              title="Don Remolo"
+            >
+              <img
+                src="https://res.cloudinary.com/dmatgvjjy/image/upload/v1677686496/don%20remolo/logo_mdhwso.jpg"
+                alt="Logo"
+                loading="lazy"
+                height="100"
+                width="100"
+                class="img-fluid logo"
+              />
+            </a>
+          </div>
+          <div class="col-12 col-md-3 my-3">
+            <ul class="list-unstyled">
+              <li class="pb-2">
+                <a class="text-decoration-none fs-4" href="/inicio">Inicio</a>
+              </li>
+              <li class="pb-2">
+                <a class="text-decoration-none fs-4" href="/#our">Nosotros</a>
+              </li>
+              <li class="pb-2">
+                <a class="text-decoration-none fs-4" href="/#products">Menú</a>
+              </li>
+              <li class="pb-2">
+                <a class="text-decoration-none fs-4" href="./#contact"
+                  >Contacto</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-3 mb-4">
+            <p class="fs-4">Redes</p>
+            <ul class="list-unstyled d-inline-flex">
+              <li class="me-3">
+                <a
+                  class="text-decoration-none fs-5"
+                  href="https://www.facebook.com"
+                  target="_blank"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    fill="currentColor"
+                    class="bi bi-facebook"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="me-3">
+                <a
+                  class="text-decoration-none fs-5"
+                  href="https://www.instagram.com"
+                  target="_blank"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    fill="currentColor"
+                    class="bi bi-instagram"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-4 mb-3">
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <a
+                  class="text-decoration-none fs-4"
+                  href="tel:2494594221"
+                  title="Administración"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    class="bi bi-telephone-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
+                    />
+                  </svg>
+                  Llamanos</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-decoration-none fs-4"
+                  href="https://goo.gl/maps/EXswAuif3Q6bjLet6"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    class="bi bi-geo-alt-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                    /></svg
+                  >Buenos Aires, Arg.</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="container-fluid copyright-styles px-2 py-3">
+      <div class="container">
+        <p class="text-center mb-0">
+          Copyright © | Todos los derechos reservados 2023. Pizzería Don Remolo
+          |
+          <a
+            href="https://www.linkedin.com/in/lis-medina
+            "
+            target="_blank"
+            class="text-decoration-none pals-style"
+            >Hecho por PixelPals</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/main.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+  </body>
+</html>
