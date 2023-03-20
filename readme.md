@@ -14,3 +14,4 @@ Este es un proyecto desarrollado por un grupo de seis personas llamados PixePals
 
 
 - [@LisMedina](https://www.github.com/octokatherine)
+-(https://github.com/Santiago-Pereira)
