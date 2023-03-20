@@ -1,0 +1,24 @@
+footer {
+  background-color: #e74423;
+  color: whitesmoke;
+  a {
+    color: whitesmoke !important;
+    &:hover {
+      color: #393333 !important;
+      transition: all 1s ease-in-out;
+    }
+  }
+}
+.copyright-styles {
+  background-color: black;
+  color: whitesmoke;
+  a {
+    text-decoration: none;
+    color: whitesmoke;
+    &:hover {
+      text-decoration: none;
+      color: #e74423 !important;
+      transition: all 1s ease-in-out;
+    }
+  }
+}

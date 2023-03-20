@@ -1,0 +1,29 @@
+header {
+  background-color: #e74423;
+  color: whitesmoke;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  a {
+    &:hover {
+      cursor: pointer;
+      color: #393333 !important;
+      transition: all 1s ease-in-out;
+    }
+  }
+}
+.logo {
+  border-radius: 50%;
+}
+.carritoContador {
+  color: whitesmoke;
+  font-size: 1.2em;
+}
+.carrito-decompras {
+  filter: invert(91%) sepia(1%) saturate(428%) hue-rotate(1deg) brightness(107%)
+    contrast(103%);
+  margin-top: 1rem;
+  &:hover {
+    filter: invert(20%);
+    transition: all 1s ease-in-out;
+  }
+}

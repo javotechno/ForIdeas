@@ -1,0 +1,72 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.inicio {
+  background-image: url("../images/fondo-header.jpg");
+  position: relative;
+  color: white;
+  height: 85vh;
+  background-size: contain;
+  width: 100%;
+  overflow: hidden;
+  h2 {
+    font-style: italic;
+    font-size: 6rem;
+    color: #e74423;
+  }
+  p {
+    color: #919191;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+h1 {
+  font-style: italic;
+  font-size: 6rem;
+  color: #f1f0de;
+}
+.title-main {
+  color: #e74423;
+}
+.gif-banner {
+  top: -3%;
+  left: 13%;
+  position: absolute;
+  z-index: 2;
+  height: 120%;
+  animation: spinner 8s infinite linear;
+  pointer-events: none;
+}
+.conteiner-black {
+  background-color: #3a3434;
+  width: 70%;
+  height: 100%;
+  z-index: 5;
+  clip-path: polygon(11% 0, 100% 0, 100% 100%, 0% 100%);
+  justify-content: space-around;
+  a {
+    text-decoration: none;
+    color: white;
+    &:hover {
+      text-decoration: none;
+      color: rgb(100, 100, 100);
+    }
+  }
+}
+.main-titles {
+  text-align: start;
+}
+.flecha {
+  height: 55px;
+  filter: invert(100%);
+  &:hover {
+    transform: scale(1.2);
+    transition: transform 0.25s ease-in-out;
+    filter: invert(51%) sepia(60%) saturate(7259%) hue-rotate(349deg)
+      brightness(94%) contrast(93%);
+  }
+}

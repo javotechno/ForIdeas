@@ -1,0 +1,34 @@
+.modal-header {
+  background-color: #e74423;
+  color: whitesmoke;
+  img {
+    filter: invert(91%) sepia(1%) saturate(428%) hue-rotate(1deg)
+      brightness(107%) contrast(103%);
+    &:hover {
+      pointer-events: pointer;
+      filter: invert(20%);
+      transition: all 1s ease-in-out;
+    }
+  }
+}
+.modal-content {
+  font-family: "Nunito Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+#btn-finish {
+  text-transform: uppercase;
+}
+.modal-active {
+  opacity: 1;
+  visibility: hidden;
+}
+.p-modal {
+  font-size: medium;
+  font-weight: bold;
+}
+.modal {
+  label {
+    font-size: medium;
+    font-weight: bold;
+  }
+}

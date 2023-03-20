@@ -135,11 +135,11 @@ function agregarCarrito(id) {
       duration: 3000,
       newWindow: true,
       close: true,
-      gravity: "top", // `top` or `bottom`
-      position: "left", // `left`, `center` or `right`
+      gravity: "top",
+      position: "left",
       backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
-      stopOnFocus: true, // Prevents dismissing of toast on hover
-      onClick: function () {}, // Callback after click
+      stopOnFocus: true,
+      onClick: function () {},
     }).showToast();
   }
 }
@@ -154,7 +154,7 @@ function renderizarCarrito() {
     cantidadTotal += product.quantity;
     total += subtotal;
     pedido.innerHTML += `
-            <div class="card ">
+            <div class="card m-3">
                 <img src="${product.img}" alt="${product.name}" class="card-img-top img-fluid">
                 <div class="card-body">
                     <h5 class="card-title text-center fw-bold">${product.name}</h5>
@@ -171,7 +171,7 @@ function renderizarCarrito() {
   });
 
   divTotal.innerHTML = `<p>Cantidad de productos: ${cantidadTotal}</p>
-                        <p>Total:$ ${total}</p>
+                        <p class= "m-2">Total:$ ${total}</p>
                         `;
   carritoContador.innerHTML = `
                                     ${cantidadTotal}
@@ -198,11 +198,11 @@ function borrarProd(id) {
     duration: 3000,
     newWindow: true,
     close: true,
-    gravity: "top", // `top` or `bottom`
-    position: "right", // `left`, `center` or `right`
+    gravity: "top",
+    position: "right",
     backgroundColor: "linear-gradient(to right, #FF6363, #FF0063)",
-    stopOnFocus: true, // Prevents dismissing of toast on hover
-    onClick: function () {}, // Callback after click
+    stopOnFocus: true,
+    onClick: function () {},
   }).showToast();
 }
 
@@ -214,11 +214,11 @@ function vaciarCarrito() {
     duration: 3000,
     newWindow: true,
     close: true,
-    gravity: "top", // `top` or `bottom`
-    position: "right", // `left`, `center` or `right`
+    gravity: "top",
+    position: "right",
     backgroundColor: "linear-gradient(to right, #FF6363, #FF0063)",
-    stopOnFocus: true, // Prevents dismissing of toast on hover
-    onClick: function () {}, // Callback after click
+    stopOnFocus: true,
+    onClick: function () {},
   }).showToast();
   total = 0;
   cantidadTotal = 0;
@@ -242,5 +242,5 @@ btnFinalizar.addEventListener("click", () => {
   txt += `Total: $${total}`;
 
   let url = "https://wa.me/2494545017?text=" + encodeURIComponent(txt); //encodeURIComponent reemplaza espacios y caracteres especiales para ser enviados por parámetro en la url.whatsapp.
-  window.open(url, "_blank"); // abrir nueva pestaña con la url
+  window.open(url, "_blank");
 });

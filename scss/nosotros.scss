@@ -1,0 +1,35 @@
+.our {
+  line-height: 1.5rem;
+}
+.img-local {
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.fixed-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 70px;
+  background-color: green;
+  width: 35px;
+  height: 35px;
+  color: #f2f2f2;
+  font-size: 24px;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 0 4px 0 black;
+  transition: all 300ms;
+  svg {
+    line-height: 35px;
+  }
+  &:hover {
+    width: 41px;
+    height: 41px;
+    right: 17px;
+    bottom: 67px;
+    svg {
+      line-height: 41px;
+      color: #f2f2f2;
+    }
+  }
+}

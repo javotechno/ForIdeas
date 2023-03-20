@@ -1,23 +1,35 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
-/* --------------------HEADER------------------------- */
-
-.carritoContador {
+footer {
+  background-color: #e74423;
   color: whitesmoke;
-  font-size: 1.2em;
 }
+footer a {
+  color: whitesmoke !important;
+}
+footer a:hover {
+  color: #393333 !important;
+  transition: all 1s ease-in-out;
+}
+
+.copyright-styles {
+  background-color: black;
+  color: whitesmoke;
+}
+.copyright-styles a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+.copyright-styles a:hover {
+  text-decoration: none;
+  color: #e74423 !important;
+  transition: all 1s ease-in-out;
+}
+
 header {
   background-color: #e74423;
   color: whitesmoke;
   font-size: 1.5rem;
   text-transform: uppercase;
 }
-
 header a:hover {
   cursor: pointer;
   color: #393333 !important;
@@ -28,53 +40,117 @@ header a:hover {
   border-radius: 50%;
 }
 
-.carrito-decompras {
-  filter: invert(91%) sepia(1%) saturate(428%) hue-rotate(1deg) brightness(107%)
-    contrast(103%);
-  margin-top: 1rem;
+.carritoContador {
+  color: whitesmoke;
+  font-size: 1.2em;
 }
 
+.carrito-decompras {
+  filter: invert(91%) sepia(1%) saturate(428%) hue-rotate(1deg) brightness(107%) contrast(103%);
+  margin-top: 1rem;
+}
 .carrito-decompras:hover {
   filter: invert(20%);
   transition: all 1s ease-in-out;
 }
-/**
-.inicio div img {
-  height: 60px;
-  filter: invert(61%) sepia(6%) saturate(83%) hue-rotate(1deg) brightness(97%)
-    contrast(93%);
-}
 
-
-.empanada-icono {
-  position: absolute;
-  top: 80%;
-  transform: rotate(-25deg);
+@media screen and (min-width: 1000px) {
+  .products {
+    height: 100vh;
+    height: auto;
+  }
+  .menu-icons {
+    border: solid 2px black;
+    border-radius: 40%;
+    padding: 1.5rem;
+  }
+  .square-prods {
+    border: 3px solid;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    padding: 1.5rem;
+  }
+  .icon-div {
+    margin-left: 5rem;
+  }
+  .our {
+    height: 100vh;
+  }
 }
-.sombrero-icono {
-  position: absolute;
-  top: 85%;
-  left: 93%;
-  transform: rotate(50deg);
+@media screen and (max-width: 768px) {
+  .navbar-collapse {
+    height: auto;
+    padding-top: 4rem;
+  }
+  .menu-icons {
+    border: solid 2px black;
+    border-radius: 40%;
+    padding: 0.5rem;
+  }
+  .conteiner-black {
+    background-color: #3a3434;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    clip-path: none;
+  }
+  .gif-banner {
+    display: none;
+  }
+  .cart-icon {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+  }
+  .img-size {
+    height: 200px;
+    width: 200px;
+  }
 }
-.harina-icono {
-  position: absolute;
-  top: 2%;
-  left: 38%;
-  transform: rotate(-20deg);
+@media screen and (max-width: 425px) {
+  .navbar-collapse {
+    height: auto;
+    padding-top: 0.5rem;
+  }
+  .menu-icons {
+    border: solid 2px black;
+    border-radius: 40%;
+    padding: 0.5rem;
+  }
+  .conteiner-black {
+    background-color: #3a3434;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    clip-path: none;
+    justify-content: space-between;
+    justify-content: center;
+  }
+  .gif-banner {
+    display: none;
+  }
+  .main-titles {
+    text-align: center;
+  }
+  .arrow-main {
+    margin-top: 4rem;
+  }
 }
-.pizza-icono {
-  position: absolute;
-  top: -1%;
-  left: 95%;
-  height: 80px;
-}
-
-/* --------------------MODAL CART------------------------- */
-
 .modal-header {
   background-color: #e74423;
   color: whitesmoke;
+}
+.modal-header img {
+  filter: invert(91%) sepia(1%) saturate(428%) hue-rotate(1deg) brightness(107%) contrast(103%);
+}
+.modal-header img:hover {
+  pointer-events: pointer;
+  filter: invert(20%);
+  transition: all 1s ease-in-out;
 }
 
 .modal-content {
@@ -91,17 +167,6 @@ header a:hover {
   visibility: hidden;
 }
 
-.modal-header img {
-  filter: invert(91%) sepia(1%) saturate(428%) hue-rotate(1deg) brightness(107%)
-    contrast(103%);
-}
-
-.modal-header img:hover {
-  pointer-events: pointer;
-  filter: invert(20%);
-  transition: all 1s ease-in-out;
-}
-
 .p-modal {
   font-size: medium;
   font-weight: bold;
@@ -112,7 +177,50 @@ header a:hover {
   font-weight: bold;
 }
 
-/* --------------------INICIO------------------------- */
+.our {
+  line-height: 1.5rem;
+}
+
+.img-local {
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+
+.fixed-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 70px;
+  background-color: green;
+  width: 35px;
+  height: 35px;
+  color: #f2f2f2;
+  font-size: 24px;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 0 4px 0 black;
+  transition: all 300ms;
+}
+.fixed-btn svg {
+  line-height: 35px;
+}
+.fixed-btn:hover {
+  width: 41px;
+  height: 41px;
+  right: 17px;
+  bottom: 67px;
+}
+.fixed-btn:hover svg {
+  line-height: 41px;
+  color: #f2f2f2;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 
 .inicio {
   background-image: url("../images/fondo-header.jpg");
@@ -123,25 +231,21 @@ header a:hover {
   width: 100%;
   overflow: hidden;
 }
-
-.inicio h2,
-h1 {
+.inicio h2 {
   font-style: italic;
   font-size: 6rem;
-}
-
-.inicio h2 {
   color: #e74423;
 }
-
-h1 {
-  color: #f1f0de;
-}
-
 .inicio p {
   color: #919191;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+h1 {
+  font-style: italic;
+  font-size: 6rem;
+  color: #f1f0de;
 }
 
 .title-main {
@@ -158,11 +262,6 @@ h1 {
   pointer-events: none;
 }
 
-@keyframes spinner {
-  0% {
-    transform: rotate(360deg);
-  }
-}
 .conteiner-black {
   background-color: #3a3434;
   width: 70%;
@@ -171,35 +270,30 @@ h1 {
   clip-path: polygon(11% 0, 100% 0, 100% 100%, 0% 100%);
   justify-content: space-around;
 }
-
 .conteiner-black a {
   text-decoration: none;
   color: white;
+}
+.conteiner-black a:hover {
+  text-decoration: none;
+  color: rgb(100, 100, 100);
 }
 
 .main-titles {
   text-align: start;
 }
 
-.conteiner-black a:hover {
-  text-decoration: none;
-  color: rgb(100, 100, 100);
-}
-
 .flecha {
   height: 55px;
   filter: invert(100%);
 }
-
 .flecha:hover {
   transform: scale(1.2);
   transition: transform 0.25s ease-in-out;
-  filter: invert(51%) sepia(60%) saturate(7259%) hue-rotate(349deg)
-    brightness(94%) contrast(93%);
+  filter: invert(51%) sepia(60%) saturate(7259%) hue-rotate(349deg) brightness(94%) contrast(93%);
 }
 
-/* --------------------MENU------------------------- */
-
+/* .btn-order  */
 .container-products {
   border: 0.1rem solid black;
   border-radius: 0.1rem;
@@ -242,7 +336,6 @@ h1 {
   padding: 1rem;
 }
 
-/* .btn-order  */
 .products {
   width: 100%;
   align-items: center;
@@ -264,188 +357,4 @@ h1 {
   width: 300px;
 }
 
-/* ---------------------NOSOTROS--------------*/
-.our {
-  line-height: 1.5rem;
-  /* background-color: lightgray; */
-}
-
-.img-local {
-  height: 100%;
-  width: 100%;
-  pointer-events: none;
-}
-
-.fixed-btn {
-  position: fixed;
-  right: 20px;
-  bottom: 70px;
-  background-color: green;
-  width: 35px;
-  height: 35px;
-  color: #f2f2f2;
-  font-size: 24px;
-  border-radius: 50%;
-  text-align: center;
-  box-shadow: 0 0 4px 0 black;
-  transition: all 300ms;
-}
-
-.fixed-btn svg {
-  line-height: 35px;
-}
-
-.fixed-btn:hover {
-  width: 41px;
-  height: 41px;
-  right: 17px;
-  bottom: 67px;
-}
-
-.fixed-btn:hover svg {
-  line-height: 41px;
-  color: #f2f2f2;
-}
-
-/*----------------FOOTER---------------*/
-footer {
-  background-color: #e74423;
-  color: whitesmoke;
-}
-
-footer a {
-  color: whitesmoke !important;
-}
-
-footer a:hover {
-  color: #393333 !important;
-  transition: all 1s ease-in-out;
-}
-
-.copyright-styles {
-  background-color: black;
-  color: whitesmoke;
-}
-
-.copyright-styles a {
-  text-decoration: none;
-  color: whitesmoke;
-}
-
-.copyright-styles a:hover {
-  text-decoration: none;
-  color: #e74423 !important;
-  transition: all 1s ease-in-out;
-}
-
-/*--------------------Logo de wsp---------------*/
-.text-reset {
-  margin: 1rem;
-}
-
-.bi-whatsapp {
-  color: whitesmoke;
-  margin-bottom: 0.5rem;
-}
-
-/*----------------- MQ  ------------*/
-@media screen and (min-width: 1000px) {
-  .products {
-    height: 100vh;
-  }
-
-  .menu-icons {
-    border: solid 2px black;
-    border-radius: 40%;
-    padding: 1.5rem;
-  }
-
-  .square-prods {
-    border: 3px solid;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    padding: 1.5rem;
-  }
-
-  .icon-div {
-    margin-left: 5rem;
-  }
-
-  .our {
-    height: 100vh;
-  }
-
-  .products {
-    height: 100vh;
-  }
-}
-
-@media screen and (max-width: 745px) {
-  .navbar-collapse {
-    height: auto;
-    padding-top: 4rem;
-  }
-
-  .conteiner-black {
-    background-color: #3a3434;
-    width: 100%;
-    height: 100%;
-    z-index: 5;
-    clip-path: none;
-  }
-
-  .gif-banner {
-    display: none;
-  }
-
-  .cart-icon {
-    height: 3.5rem;
-    width: 3.5rem;
-  }
-
-  .navbar-nav {
-    flex-direction: column;
-    align-items: center;
-    font-size: 2rem;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  .navbar-collapse {
-    height: auto;
-    padding-top: 0.5rem;
-  }
-
-  .menu-icons {
-    border: solid 2px black;
-    border-radius: 40%;
-    padding: 0.5rem;
-  }
-
-  .inicio {
-    flex: none;
-  }
-  .conteiner-black {
-    background-color: #3a3434;
-    width: 100%;
-    height: 100%;
-    z-index: 5;
-    clip-path: none;
-    justify-content: space-between;
-  }
-
-  .gif-banner {
-    display: none;
-  }
-
-  .main-titles {
-    text-align: center;
-  }
-
-  .conteiner-black {
-    justify-content: center;
-  }
-  .arrow-main {
-    margin-top: 4rem;
-  }
-}
+/*# sourceMappingURL=.main.css.map */
