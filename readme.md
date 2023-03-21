@@ -28,6 +28,6 @@ Este es un proyecto desarrollado por un grupo de seis personas llamados PixePals
 - [@NicolasSantaCruz](https://www.linkedin.com/in/nicolas-santa-cruz-8b7802224/)
 - [@FedericoMassolo](https://www.linkedin.com/in/federico-massolo-55a13b238/)
 - [@SantiagoPereira](https://www.linkedin.com/in/santiago-pereira-994229244/)
-=======
+
 
 
