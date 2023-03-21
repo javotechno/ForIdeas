@@ -380,7 +380,7 @@ footer a:hover {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 999px) {
   .navbar-collapse {
     height: auto;
     padding-top: 4rem;
