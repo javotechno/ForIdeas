@@ -30,6 +30,4 @@ Este es un proyecto desarrollado por un grupo de seis personas llamados PixePals
 - [@SantiagoPereira](https://www.linkedin.com/in/santiago-pereira-994229244/)
 =======
 
-- [@LisMedina](https://www.github.com/octokatherine)
--(https://github.com/Santiago-Pereira)
->>>>>>> 20a1467cc697d32771ea09dbb61349302890882c
+
